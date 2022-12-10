@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 2</title>
+    <div>Hi abhishek</div>
+    <table>
+        <p onclick="handler(event)">List of Movies</p>
+        <ul>
+            <li>RRR</li>
+            <li>KGF 2</li>
+        </ul>
+    </table>
+</head>
+<script>
+    function handler(event){
+        ev = event;
+        console.log(event.target.innerText);
+        event.target.style.color="red";
+    }
+    function init(){
+        list=document.querySelectorAll("li");
+        for(let i in list)
+        list[i].onclick = handler;
+        document.querySelector("p").addEventListener("Click",function(event)
+        {event.target.innerHTML="these were top"})
+    }
+    
+</script>
+<body onload="init()">
+    <form method="post",action="">
+        <input type="button" name="my Button" value="click me" onclick="alert('you clicked the button');">
+    </form>
+</body>
+</html>

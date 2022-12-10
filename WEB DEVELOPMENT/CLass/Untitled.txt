@@ -1,0 +1,29 @@
+<html>
+
+
+<body>
+constructor(props, context){
+super(props, context);
+this.state={seconds:0};
+this.timertick=this.timertick.bind(this);
+}
+componentDidMount(){
+         setInterval(this.timertick,1000);
+}
+timertick(){
+this.setState((prevState)=>{
+		return 
+<div id="container"</div>
+<script type ="text/babel">
+Class Counter extends React.Component{
+constructor(props,context);
+this.state={seconds:props.start};
+this.timertick=this.timer.bind(this);
+}
+componentDidMount{
+this.ti=setInterval(this.timertick,1000);
+}
+timertick(){
+				if(this.state(prevState)=>{
+					return (<div>
+							<Counter start ={this.state

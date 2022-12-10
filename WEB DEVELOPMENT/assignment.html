@@ -1,0 +1,149 @@
+
+<html>
+<link rel = "icon"  type="image/x-icon" href="C:\Users\Bindushree SR\OneDrive\Documents\html files\pesulogo.png">
+<title> PES Survey form</title>
+<head >
+<center>
+<img  src="C:\Users\Bindushree SR\OneDrive\Documents\html files\pesulogo.png" width=100 height=100/>
+</center>
+<h1  align=center style="font-family:calibri;font-size:45"><strong>PES Student Count Information</strong></h1>
+</head>
+<body style="background-color: lightgreen">
+
+<table text-align=center width=700 height=150 align=center border=4 style="background-color:white" ><div>
+<tr>
+<td><b>Campus</td>
+<td>Course</td>
+<td>No. of Students</td>
+</tr>
+<tr>
+<td rowspan=2><b>RR</td>
+<td>B.Tech</td>
+<td>500</td>
+</tr>
+<tr>
+<td>M.Tech</td>
+<td>150</td>
+</tr>
+<tr>
+<td rowspan=2><b>EC</td>
+<td>B.Tech</td>
+<td>500</td>
+</tr>
+<tr>
+<td>M.Tech</td>
+<td>150</td>
+</tr>
+<tr>
+<td colspan=3><b>Total Students - 1300</td>
+</tr>
+</div>
+</table>
+<p style="font-family:calibri;font-size:45" align=center><b>PES Students Survey Forms</b></p>
+
+<center><div class=nit style="background: ghostwhite;
+            font-family:calibri; 
+            font-size: 20px; 
+            padding: 10px; 
+			width:550;
+            border: 1px solid lightgray; 
+            margin: 100px;" >	
+<form style="text-align:left">
+<label for="name">Name</label>
+<input type="text" id="name" placeholder="Enter your name" required /><br>
+<label for="email">Email</label><br>
+<input type="email" id="email" placeholder="Enter your email"  required/><br>
+<label for="age">Age</label><br>
+<input type="number" id="age" placeholder="Enter your age"  min=17  width=150 required/><br>
+Which option best describes you?<br>
+<select id = "select" required>
+<option value="" disabled selected style="color:gray">Select Course</option>
+<option value="Comp">Computer Science</option>
+<option value="electronics">Electronics</option>
+<option value="mechanical">Mechanical</option>
+<option value="artint">Artificial Intelligence</option>
+<option value="agri">B.S.Agriculture</option>
+<option value="veterinary">Veterinary</option>
+</select><br>
+Will you take up minor courses?<br>
+<input type="radio"  ifd=yes name="minor" value="yes"/><label for="yes">Yes</label><br>
+<input type="radio"  id=no name="minor" value="no"/><label for="no">No</label><br>
+<input type="radio"  id=maybe name="minor" value="maybe" /><label for="maybe">Maybe</label><br><br>
+Languages and Frameworks known(<style="font-size:">Check all that apply</style>)<br>
+<input type="checkbox" id= cb1 name="c" value=1/>C<br>
+<input type="checkbox" id=cb2 name="c++" value=2/>C++<br>
+<input type="checkbox" id=cb3 name="java" value=3/>Java<br>
+<input type="checkbox" id=cb4 name="python" value=4/>Python<br><br>
+Any comments or suggestions<br>
+<textarea name="comments" rows=4 cols=70 placeholder="Enter your comments"/></textarea><br><br>
+<div id="alert" style="text-align:left;font-size:15"><img src="C:\Users\Bindushree SR\OneDrive\Documents\html files\worldlogo.jpg" height=10 width=15/>file://<br><br>Successfully submitted
+<button id = "ok" onclick = "closeDialog()" > Ok</button>
+</div>
+<input type=submit id=button name="submit" value="Submit"   width=73 onclick="myfunction()" /><br><br>
+<input   id=reset type=reset name="Reset" value="reset" size=73/>
+</form>
+</div></center>
+<script>
+var alertDiv = document.getElementById("alert");
+      function myfunction() {
+         alertDiv.style.display = "block"
+      }
+      function closeDialog() {
+         alertDiv.style.display = "none";
+      }
+//function myfunction(){
+//alert("Successfully submiited");}
+</script>
+</body>
+</body>
+</html>
+
+<style>
+#alert {
+         display: none;
+         background-color: rgb(256,256,256);
+         border: 1px solid green;
+		 border-radius:12px;
+         position: fixed;
+         height: 100px;
+         width: 350px;
+         left: 40%;
+         top: 2%;
+         padding: 6px 8px 8px;
+         text-align: center;
+      }
+	  button {
+         border-radius: 5px;
+         height: 2rem;
+         padding: 7px;
+		 width:50px;
+         cursor: pointer;
+         border: 2px black;
+         background-color: lightblue;
+      }
+	  #ok {
+         position: absolute;
+         right: 20px;
+         bottom: 10px;
+      }
+  #button,#reset{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  width:545;
+  color: white;
+  height:25;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+  #age,#name,#email,#select{
+  height:30px;
+  width:535px;
+  }
+  .nit{
+      align:center;
+	  }
+ td{text-align:center}
+ h1{size:10}
+</style>

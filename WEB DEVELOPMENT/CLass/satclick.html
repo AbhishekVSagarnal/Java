@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Prevent default example</title>
+	<style>
+		div {
+			margin-bottom:10px;
+		}
+	</style>
+	</head>
+	<!-- <body> -->
+		<!-- <form>
+			<div>
+				<label for='fname'>First name:</label>
+				<input id="fname" type="text">
+			</div>
+			<div>
+				<label for="lname">Last Name:</label>
+				<input id="lname" type="text">
+			</div>
+			<div>
+				<input type="submit" id="submit">
+			</div>
+		</form>
+<p></p> -->
+
+	<!-- <script type="text/javascript">
+const form = document.querySelector('form');
+	const fname =document.getElementById('fname');
+	const lname =document.getElementById('lname');
+	const para =document.querySelector('p');
+
+	form.onsubmit=function(e) {
+		if(fname.value === ''|| lname.value === ''){
+			e.preventDefault();
+			para.textContent='You need to fill in both names!'
+			alert("youneed to fill both names");
+		}
+    } -->
+<body>
+	<p>Count numbers:<output id ="result"></output></p>
+	<button onclick="startWorker()">Start Window</button>
+	<button onclick="stopWorker()">Stop Worker</button>
+		<!-- <canvas id="myc" width="200" height="200" style="border: 1px solid black;"></canvas>
+<script type="text/javascript">
+	    var c=document.getElementById("myc");
+	    var ctx=c.getContext("2d");
+	    ctx.moveTo(0,0);
+	    ctx.lineTo(200,200);
+	    ctx.beginPath();
+	    ctx.arc(95,50,40,0,2*Math.PI/4,true);
+	// ctx(x,y,radius,starting radian angle,ending circle in radian,true(anticlockwise)/false(clockwise));
+	    ctx.stroke();
+	// var grd=ctx.createLinearGradient(0,0,200,0);
+	// grd.addColorStop(0,"red");
+	// grd.addColorStop(1,"white");
+	// ctx.fillstyle=grd;
+	// ctx.fillRect(10,10,50,150,80);
+	// ctx.fillStyle="#FF0000";
+//<svg width="100"height="100">
+// 		<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+// 	</svg>
+	// <polygon points="200 100,300 100,300 200,200 200" style="fill:lime;stroke:purple;stroke-width:1"/>
+	// // ctx.fillRect(50,50,50,50); -->
+<script>
+	var w;
+	function startWorker()
+	{
+		w=new Worker("script.js")
+		w.onmessage=function(event)
+		{
+			document.getElementById("result").innerHTML=event.data;
+		}
+	}
+function stopWorker()
+{
+	w.terminate();
+	w=undefined;
+} 
+</script>
+<!-- <h2>The Video element</h2> -->
+<!-- <video width ='500' height ='750' controls autoplay>
+	<source src="ganapati.mp4" type="video/mp4"> -->
+<!-- </video> -->
+</body>
+</html>
